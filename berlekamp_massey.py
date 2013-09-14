@@ -1,4 +1,3 @@
-
 def print_poly(c):
 	str_list = ['x^'+str(i) for i in range(1,len(c)) if c[i] == 1]
 	print '1 + ' + ' + '.join(str_list)
@@ -7,7 +6,7 @@ class LFSR:
 
 	def __init__(self, taps, init_state):
 		if type(taps) != type(set()) and type(taps) != type(list()):
-			raise Exception('<taps> parameter should a list/set of bits indexes')
+			raise Exception('<taps> parameter should be a list/set of bits indexes')
 		if type(init_state) != type(list()):
 			raise Exception('<init_state> parameter should be a list of 0/1(s)')
 		assert all(bi in (0,1) for bi in init_state)
